@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client</title>
+</head>
+<body>
+<script src="/socket.io/socket.io.js"></script>
+Message will be send after 2000 ms
+<script>
+
+    var socket = io.connect('/someNsp');
+
+    setTimeout(function () {
+        socket.emit("messageToServer", 'Hello from client', function (success) {
+            if(success) return alert('Sending message to server!');
+            alert('Error in send message to server!');
+        });
+    }, 2000);
+
+    socket.on("disconnect", function () {
+        alert('SOCKET disconnected!');
+    });
+
+</script>
+</body>
+</html>

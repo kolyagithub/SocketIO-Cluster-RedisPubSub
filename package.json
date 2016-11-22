@@ -1,0 +1,19 @@
+{
+  "name": "socketIO-redisPubSub-Cluster",
+  "version": "0.1.0",
+  "description": "use cluster with socketIO",
+  "keywords": [
+    "cluster",
+    "redis",
+    "Pub/Sub",
+    "socketIO"
+  ],
+  "author": "qudrat abdullaev alimov.kolya@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.13.4",
+    "redis": "2.6.1",
+    "socket.io": "1.4.8",
+    "underscore": "1.8.3"
+  }
+}
